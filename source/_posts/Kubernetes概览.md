@@ -1,7 +1,7 @@
 ---
 title: Kubernetes概览
 date: 2017-12-23 14:33:03
-tags:
+tags: Kubernetes
 ---
 ## Kubernetes概览
 ### Kubernetes
@@ -61,3 +61,6 @@ K8S通过了 Pods 和 Label 的方式，提供一组容器紧耦合和松耦合�
 * Ingress controller
 * Heapster (resource monitoring)
 * Dashboard (GUI)
+
+### 文档
+https://github.com/kubernetes/community/blob/master/contributors/design-proposals/architecture/architecture.md
