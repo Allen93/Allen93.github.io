@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="且听风吟">
 <meta property="og:description" content="K8S 调度器按照 K8S 的设计原则， 所有 Controller 的实现都是通过 watch Api Server，监听资源的变化并做出操作。调度器亦是如此，在内存中维护一个podQueue，并watch pod变化，当有未调度pod增加时， 将节点加入podQuene 中。定期从 podQuene 中取 pod, 寻找适合这个 pod 的节点，执行 binding 在该节点上部署 pod。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-27T16:46:07.000Z">
+<meta property="og:updated_time" content="2017-12-27T16:51:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes调度器">
 <meta name="twitter:description" content="K8S 调度器按照 K8S 的设计原则， 所有 Controller 的实现都是通过 watch Api Server，监听资源的变化并做出操作。调度器亦是如此，在内存中维护一个podQueue，并watch pod变化，当有未调度pod增加时， 将节点加入podQuene 中。定期从 podQuene 中取 pod, 寻找适合这个 pod 的节点，执行 binding 在该节点上部署 pod。">
@@ -357,6 +357,7 @@
 </ul>
 </li>
 </ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://cizixs.com/2017/07/19/kubernetes-scheduler-source-code-analysis" target="_blank" rel="noopener">http://cizixs.com/2017/07/19/kubernetes-scheduler-source-code-analysis</a><br><a href="http://cizixs.com/2017/03/10/kubernetes-intro-scheduler" target="_blank" rel="noopener">http://cizixs.com/2017/03/10/kubernetes-intro-scheduler</a></p>
 
       
     </div>
@@ -520,7 +521,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#K8S-调度器"><span class="nav-number">1.</span> <span class="nav-text">K8S 调度器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">2.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Config"><span class="nav-number">3.</span> <span class="nav-text">Config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scheduler"><span class="nav-number">4.</span> <span class="nav-text">Scheduler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调度策略以及参数生成"><span class="nav-number">5.</span> <span class="nav-text">调度策略以及参数生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的调度实现"><span class="nav-number">6.</span> <span class="nav-text">算法的调度实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tips"><span class="nav-number">6.1.</span> <span class="nav-text">Tips</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#K8S-调度器"><span class="nav-number">1.</span> <span class="nav-text">K8S 调度器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">2.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Config"><span class="nav-number">3.</span> <span class="nav-text">Config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scheduler"><span class="nav-number">4.</span> <span class="nav-text">Scheduler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调度策略以及参数生成"><span class="nav-number">5.</span> <span class="nav-text">调度策略以及参数生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的调度实现"><span class="nav-number">6.</span> <span class="nav-text">算法的调度实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tips"><span class="nav-number">6.1.</span> <span class="nav-text">Tips</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
