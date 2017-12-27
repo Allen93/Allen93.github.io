@@ -251,3 +251,8 @@ for i := range nodes {
 * 其他值得一看的地方： 
 	* Informer 的实现
 	* 选主模块的实现
+
+
+### 参考
+http://cizixs.com/2017/07/19/kubernetes-scheduler-source-code-analysis
+http://cizixs.com/2017/03/10/kubernetes-intro-scheduler
